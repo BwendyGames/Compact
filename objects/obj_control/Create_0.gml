@@ -1,7 +1,8 @@
 spawn_tiles()
 
 global.money = 0;
-global.moves = 10;
+global.max_moves = 10;
+global.moves = global.max_moves;
 
 dragging = false;
 	

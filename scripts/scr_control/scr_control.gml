@@ -51,5 +51,5 @@ function array_copy_(source) {
 }
 
 function end_turn(){
-	
+	global.moves = global.max_moves;
 }
