@@ -55,6 +55,7 @@
     {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},},
     {"id":{"name":"obj_bg","path":"objects/obj_bg/obj_bg.yy",},},
     {"id":{"name":"obj_button_create_base","path":"objects/obj_button_create_base/obj_button_create_base.yy",},},
+    {"id":{"name":"obj_button_end_turn","path":"objects/obj_button_end_turn/obj_button_end_turn.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
     {"id":{"name":"obj_e_starbase","path":"objects/obj_e_starbase/obj_e_starbase.yy",},},
     {"id":{"name":"obj_p_ship_1","path":"objects/obj_p_ship_1/obj_p_ship_1.yy",},},

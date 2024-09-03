@@ -1,0 +1,1 @@
+sprite_index = Button_Up

@@ -49,3 +49,7 @@ function array_copy_(source) {
     
     return copy;
 }
+
+function end_turn(){
+	
+}
