@@ -1,5 +1,8 @@
 spawn_tiles()
 
+global.money = 0;
+global.moves = 10;
+
 dragging = false;
 	
 view_width = 1366;
