@@ -59,6 +59,7 @@
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
     {"id":{"name":"obj_e_starbase","path":"objects/obj_e_starbase/obj_e_starbase.yy",},},
     {"id":{"name":"obj_p_ship_1","path":"objects/obj_p_ship_1/obj_p_ship_1.yy",},},
+    {"id":{"name":"obj_p_ship","path":"objects/obj_p_ship/obj_p_ship.yy",},},
     {"id":{"name":"obj_p_starbase","path":"objects/obj_p_starbase/obj_p_starbase.yy",},},
     {"id":{"name":"obj_tile","path":"objects/obj_tile/obj_tile.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},

@@ -1,18 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_p_ship_1",
-  "eventList":[],
+  "%Name":"obj_p_ship",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_p_ship_1",
+  "name":"obj_p_ship",
   "overriddenProperties":[],
   "parent":{
     "name":"Player",
     "path":"folders/Objects/Ship/Player.yy",
   },
-  "parentObjectId":{
-    "name":"obj_p_ship",
-    "path":"objects/obj_p_ship/obj_p_ship.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_p_ship_1",
-    "path":"sprites/spr_p_ship_1/spr_p_ship_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

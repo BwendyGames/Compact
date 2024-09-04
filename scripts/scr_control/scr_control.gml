@@ -50,6 +50,19 @@ function array_copy_(source) {
     return copy;
 }
 
-function end_turn(){
-	global.moves = global.max_moves;
+function end_turn() {
+    global.moves = 10;
+}
+
+function reset_ship() {
+
+    target_tile_x = x;
+    target_tile_y = y;
+    moving = false;
+    dragging = false;
+    drag_x = x;
+    drag_y = y;
+    
+    // Clear path segments
+    path_segments = [];
 }
