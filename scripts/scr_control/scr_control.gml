@@ -54,7 +54,7 @@ function end_turn() {
     global.moves = 10;
 }
 
-function reset_ship() {
+function reset_ships() {
 
     target_tile_x = x;
     target_tile_y = y;
