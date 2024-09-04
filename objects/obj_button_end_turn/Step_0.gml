@@ -16,6 +16,5 @@ if (mouse_check_button_pressed(mb_left)) {
     if (mouse_x_world >= button_x_world && mouse_x_world <= button_x_world + button_width &&
         mouse_y_world >= button_y_world && mouse_y_world <= button_y_world + button_height) {
         // Button clicked
-        show_message("Button clicked!");
     }
 }
