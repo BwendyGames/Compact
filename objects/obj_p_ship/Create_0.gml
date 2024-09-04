@@ -3,8 +3,8 @@ tile_width = 64;
 tile_height = 64;
 
 // Ship position on the grid
-initial_tile_x = 0; // Set this to the initial tile X position
-initial_tile_y = 0; // Set this to the initial tile Y position
+initial_tile_x = 6; // Set this to the initial tile X position
+initial_tile_y = 6; // Set this to the initial tile Y position
 
 // Movement control variables
 dragging = false;

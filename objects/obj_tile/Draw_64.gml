@@ -1,4 +1,4 @@
-if hovering = true && selected = false{
+if hovering = true && selected = false {
 	draw_set_font(fnt_gui)
 	draw_text(room_width/2-100,room_height-100, "The " + name + " System")
 	draw_set_font(fnt_main)

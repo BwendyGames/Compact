@@ -15,7 +15,7 @@ var world_mouse_x = camera_get_view_x(cam) + (mouse_x / view_w) * view_w;
 var world_mouse_y = camera_get_view_y(cam) + (mouse_y / view_h) * view_h;
 
 // Adjust the camera's view size based on the new zoom level
-camera_set_view_size(cam, view_width * zoom, view_height * zoom);
+camera_set_view_size(cam, global.view_width * zoom, global.view_height * zoom);
 
 // Calculate the new view size after zooming
 var new_view_w = camera_get_view_width(cam);

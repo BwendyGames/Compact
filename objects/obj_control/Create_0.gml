@@ -6,12 +6,13 @@ global.moves = global.max_moves;
 
 dragging = false;
 	
-view_width = 1366;
-view_height = 768;
+xDiff = room_width / 2
+yDiff = room_height / 2
+
+global.view_width = 1366;
+global.view_height = 768;
 	
-// Boiler plate code
-var cam = camera_create_view(0, 0, view_width, view_height);
-view_set_camera(0, cam);
+// Boilerplate code
 view_enabled = true;
 view_visible[0] = true;
 
@@ -19,3 +20,11 @@ zoom = 1.0;
 min_zoom = 0.2;
 max_zoom = 2.0;
 zoom_speed = 0.1;
+
+// Initialize the camera
+camera = view_get_camera(0);
+camera_set_view_size(camera, global.view_width * zoom, global.view_height * zoom);
+
+// Update global variables
+global.camera = camera;
+global.zoom = zoom;
