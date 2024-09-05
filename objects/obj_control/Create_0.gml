@@ -28,3 +28,5 @@ camera_set_view_size(camera, global.view_width * zoom, global.view_height * zoom
 // Update global variables
 global.camera = camera;
 global.zoom = zoom;
+
+global.current_dragging_ship = noone;

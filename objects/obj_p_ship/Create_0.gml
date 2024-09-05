@@ -3,11 +3,13 @@ tile_width = 64;
 tile_height = 64;
 
 // Ship position on the grid
-initial_tile_x = 6; // Set this to the initial tile X position
-initial_tile_y = 6; // Set this to the initial tile Y position
+initial_tile_x = irandom_range(0,16);
+initial_tile_y = irandom_range(0,12);
+randomize()
 
 // Movement control variables
 dragging = false;
+combining = false;
 moving = false;
 path_segments = []; // Store the path as an array of {x, y} coordinates
 

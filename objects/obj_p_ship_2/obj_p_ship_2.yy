@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_p_ship_1",
+  "%Name":"obj_p_ship_2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_p_ship_1",
+  "name":"obj_p_ship_2",
   "overriddenProperties":[],
   "parent":{
     "name":"Player",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_p_ship_1",
-    "path":"sprites/spr_p_ship_1/spr_p_ship_1.yy",
+    "name":"spr_p_ship_2",
+    "path":"sprites/spr_p_ship_2/spr_p_ship_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

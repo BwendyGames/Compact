@@ -5,7 +5,7 @@ for (var i = 0; i < num_tiles; ++i) {
     tiles[i] = instance_find(obj_tile, i);
 }
 
-// Conditional logic based on 'selected' status
+// Check if the ship is being dragged; skip selection if true
 if (!obj_control.dragging) {
     if (controller == "player") {
         if (!selected) {
@@ -13,20 +13,23 @@ if (!obj_control.dragging) {
             for (var j = 0; j < num_tiles; ++j) {
                 if (tiles[j] != self) {
                     tiles[j].selected = false;
-					tiles[j].sprite_index = spr_tile
+                    tiles[j].sprite_index = spr_tile; // Reset the sprite of other tiles
                 }
             }
 
-            // Select this tile
+            // Select this tile if the player isn't dragging
             selected = true;
-            obj_button_create_base.visible = true;
+            sprite_index = spr_tile_selected; // Change the sprite to indicate selection
+            obj_button_create_base.visible = true; // Show the base creation button
         } else {
-            // Deselect this tile
+            // Deselect this tile if already selected
             selected = false;
-            obj_button_create_base.visible = false;
+            sprite_index = spr_tile; // Reset the sprite to default
+            obj_button_create_base.visible = false; // Hide the base creation button
         }
-        //controller = "enemy";
-    } else if (controller == "enemy") {
-        //controller = "player";
     }
+} else {
+    // If dragging, make sure no tiles are selected
+    selected = false;
+    sprite_index = spr_tile; // Reset the sprite to default
 }

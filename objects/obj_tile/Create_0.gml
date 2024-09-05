@@ -2,6 +2,10 @@ controller = "none"
 hovering = false
 selected = false
 
+// Initialize the number of ships on this tile
+ships_on_tile = 0;
+previous_tile = noone; // No tile at the start
+
 // Define the array of solar system names
 global.solar_system_names = [
     "Aurora", "Nebula", "Eclipse", "Zenith", "Nova", "Celestia", "Pinnacle", 
