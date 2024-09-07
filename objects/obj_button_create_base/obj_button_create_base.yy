@@ -30,6 +30,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"text","filters":[],"listItems":[],"multiselect":false,"name":"text","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Create Base","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"my_function","filters":[],"listItems":[],"multiselect":false,"name":"my_function","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"create_base","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

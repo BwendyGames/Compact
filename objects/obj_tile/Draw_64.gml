@@ -6,7 +6,11 @@ if hovering = true && selected = false {
 
 if selected = true {
 	var sprite = panel_3
-	obj_button_create_base.visible = true
+	if has_base == false {
+		obj_button_create_base.visible = true
+	} else {
+		obj_button_create_ship.visible = true
+	}
 	draw_sprite(sprite,1,room_width-340, room_height-448)
-	draw_text(room_width-235, room_height-400,"The " + name + " System")
+	draw_text(room_width-240, room_height-390,"The " + name + " System")
 } 

@@ -4,6 +4,10 @@ draw_self();
 if (dragging) {
     draw_set_color(c_white); // Set the line color
 
+    // Calculate the center of the ship
+    var ship_center_x = x + sprite_width / 2;
+    var ship_center_y = y + sprite_height / 2;
+
     // Draw the path based on segments
     if (array_length(path_segments) > 0) {
         var prev_x = path_segments[0][0];

@@ -23,3 +23,5 @@ global.available_names = array_copy_(global.solar_system_names);
 
 // Example usage in the Create event
 name = get_unique_name();
+
+has_base = false;

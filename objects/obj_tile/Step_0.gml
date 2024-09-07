@@ -10,6 +10,7 @@ if hovering = true{
 
 if selected = true {
 	sprite_index = spr_tile_selected
+	obj_button_create_base.my_tile = self;
 }
 
 // Reset the ship count for this tile
@@ -23,7 +24,7 @@ var bottom = y + sprite_height;
 
 // Iterate through all obj_p_ship_1 instances and check if they are within this tile's boundaries
 with (obj_p_ship) {
-    if (x >= other.x && x < other.x + tile_width && y >= other.y && y < other.y + tile_height) {
+    if (x >= other.x && x < other.x + global.tile_width && y >= other.y && y < other.y + global.tile_height) {
         // Increment the ship count for this specific tile
         other.ships_on_tile += 1;
     }

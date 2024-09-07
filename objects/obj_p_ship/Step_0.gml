@@ -5,7 +5,7 @@ if (mouse_check_button_pressed(mb_left) || mouse_check_button_pressed(mb_right))
             dragging = true;
             combining = mouse_check_button_pressed(mb_left); // Set combining flag for left mouse button
             splitting = mouse_check_button_pressed(mb_right); // Set splitting flag for right mouse button
-            path_segments = [[x, y]]; // Initialize with the current position
+            path_segments = [[x + sprite_width / 2, y + sprite_height / 2]]; // Initialize with the center position
 
             // Set this ship as the currently dragged ship
             global.current_dragging_ship = id;
@@ -16,8 +16,8 @@ if (mouse_check_button_pressed(mb_left) || mouse_check_button_pressed(mb_right))
 // Update drag position while dragging
 if (dragging) {
     // Calculate the center of the tile based on the mouse position
-    drag_x = floor(mouse_x / tile_width) * tile_width + tile_width / 2;
-    drag_y = floor(mouse_y / tile_height) * tile_height + tile_height / 2;
+    drag_x = floor(mouse_x / global.tile_width) * global.tile_width + global.tile_width / 2;
+    drag_y = floor(mouse_y / global.tile_height) * global.tile_height + global.tile_height / 2;
 
     // Only add to path_segments if the new position is different from the last position
     if (array_length(path_segments) == 0 || 
@@ -40,7 +40,7 @@ if (mouse_check_button_released(mb_left) || mouse_check_button_released(mb_right
                 var segment_end_x = path_segments[i + 1][0];
                 var segment_end_y = path_segments[i + 1][1];
                 
-                total_tiles_needed += point_distance(segment_start_x, segment_start_y, segment_end_x, segment_end_y) / tile_width;
+                total_tiles_needed += point_distance(segment_start_x, segment_start_y, segment_end_x, segment_end_y) / global.tile_width;
             }
         }
 
@@ -69,16 +69,16 @@ if (moving && array_length(path_segments) > 0) {
     var segment_x = path_segments[0][0];
     var segment_y = path_segments[0][1];
     
-    direction = point_direction(x, y, segment_x, segment_y);
-    var distance = point_distance(x, y, segment_x, segment_y);
+    direction = point_direction(x + sprite_width / 2, y + sprite_height / 2, segment_x, segment_y);
+    var distance = point_distance(x + sprite_width / 2, y + sprite_height / 2, segment_x, segment_y);
 
     if (distance > move_speed) {
         x += lengthdir_x(move_speed, direction);
         y += lengthdir_y(move_speed, direction);
     } else {
         // Snap to the center of the target tile
-        x = segment_x;
-        y = segment_y;
+        x = segment_x - sprite_width / 2;
+        y = segment_y - sprite_height / 2;
         
         tiles_traveled += 1; // Increment tiles traveled count
         
@@ -99,10 +99,10 @@ if (moving && array_length(path_segments) > 0) {
                 var ship2 = instance_create_depth(segment_x, segment_y, depth, obj_p_ship_1);
                 
                 // Center the ships relative to the tile center
-                ship1.x = segment_x;
-                ship1.y = segment_y;
-                ship2.x = segment_x;
-                ship2.y = segment_y;
+                ship1.x = segment_x - sprite_width / 2;
+                ship1.y = segment_y - sprite_height / 2;
+                ship2.x = segment_x - sprite_width / 2;
+                ship2.y = segment_y - sprite_height / 2;
             } else if (combining && sprite_index == spr_p_ship_1) {
                 // Combining mode (left-click)
                 var count = 0;
@@ -110,7 +110,7 @@ if (moving && array_length(path_segments) > 0) {
                 
                 // Collect instances of obj_p_ship_1 at the target location
                 with (obj_p_ship_1) {
-                    if (x == segment_x && y == segment_y) {
+                    if (x == segment_x - sprite_width / 2 && y == segment_y - sprite_height / 2) {
                         array_push(instances, id);
                         count += 1;
                     }
@@ -125,9 +125,9 @@ if (moving && array_length(path_segments) > 0) {
                         instance_destroy(ship1); // Destroy first ship
                         instance_destroy(ship2); // Destroy second ship
 
-                        var new_ship = instance_create_depth(segment_x, segment_y, depth, obj_p_ship_2);
-                        new_ship.x = segment_x;
-                        new_ship.y = segment_y;
+                        var new_ship = instance_create_depth(segment_x - sprite_width / 2, segment_y - sprite_height / 2, depth, obj_p_ship_2);
+                        new_ship.x = segment_x - sprite_width / 2;
+                        new_ship.y = segment_y - sprite_height / 2;
                     }
                 }
             }
