@@ -1,6 +1,6 @@
 ![alt text](sprites/logo/16e96143-62a5-4a43-8293-8a26d2f4c590.png)
 
-An in development, tile-based, turn-based, sci-fi strategy game in Game Maker Studio 2. Making this for fun.
+An in development, tile-based, turn-based, sci-fi strategy game in Game Maker Studio 2.  My intention for making this is to give a good foundation, for anyone to make such a game.
 
 Starbase asset by [MillionthVector](http://millionthvector.blogspot.de) on [OpenGameArt.org](https://opengameart.org/) released under the Creative Commons BY License: https://creativecommons.org/licenses/by/4.0/
 
